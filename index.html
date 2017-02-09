@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Högre - Lägre</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="game_solitaire.ico">
+</head>
+<body>        
+    <div class="window">
+      <header>
+        <img src="game_solitaire.ico" alt="Ikon">
+        <span>Högre - Lägre</span>
+      </header>
+      <main>
+        <div class="welcome">
+          <h3>Högre - Lägre</h3>
+          <p>Välj om du tror att nästa kort kommer att ha ett lägre, samma eller större värde. Desto fler rätt, desto mer poäng får du. Du har 5 försök. Lycka till!</p>
+          <button class="draw-card">Dra ett kort</button>  
+        </div>
+        <div id="reveal">
+          <section class="score">
+            <h1>Poäng: <span class="points"></span></h1>
+            <h2>Försök kvar: <span id="lives-left"></span></h2>
+          </section>
+          <section class="card-area">
+            <div id="played-cards" class="card-element"></div>
+            <div id="card-stack" class="card-element"></div>
+          </section>
+          <div class="buttons">
+            <button data-name="lower">Lägre</button>
+            <button data-name="equal">Samma</button>
+            <button data-name="higher">Högre</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="window game-over">
+      <header>
+        <img src="game_solitaire.ico" alt="Ikon">
+        <span>Högre - Lägre - Spela igen</span>
+      </header>
+      <main>
+        <div id="last-scores">
+          <ul id="last-scores-list"></ul>
+        </div>
+        <h1>Slut</h1>
+        <h2>Du fick <span class="points"></span> poäng.</h2>
+        <label for="username">Skriv ditt namn för att spara din poäng</label>
+        <input id="username">
+        <button id="restart">Spela igen</button>
+      </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="/main.js"></script>
+</body>
+</html>
